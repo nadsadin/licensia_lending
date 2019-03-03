@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'PF Din Text Comp Pro';
+  src: url("../fonts/pfdintextcomppro-bold_6.ttf");
+  src: local("../fonts/pfdintextcomppro-bold_6"), url("../fonts/pfdintextcomppro-bold_6.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'PF Din Text Comp Pro';
+  src: url("../fonts/PFDinTextCompPro-Light_2.ttf");
+  src: local("../fonts/PFDinTextCompPro-Light_2"), url("../fonts/PFDinTextCompPro-Light_2.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'PF Din Text Comp Pro';
+  src: url("../fonts/PFDinTextCompPro-Medium_2.ttf");
+  src: local("../fonts/PFDinTextCompPro-Medium_2"), url("../fonts/PFDinTextCompPro-Medium_2.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'PF Din Text Comp Pro';
+  src: url("../fonts/PFDinTextCompPro-Regular_2.ttf");
+  src: local("../fonts/PFDinTextCompPro-Regular_2"), url("../fonts/PFDinTextCompPro-Regular_2.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+/*# sourceMappingURL=fonts.css.map */

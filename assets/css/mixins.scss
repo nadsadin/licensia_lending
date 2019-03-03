@@ -1,0 +1,92 @@
+@mixin font-light(){
+  font-weight: 300;
+}
+@mixin font-regular(){
+  font-weight: 400;
+}
+@mixin font-medium(){
+  font-weight: 500;
+}
+@mixin font-bold(){
+  font-weight: 600;
+}
+
+
+@mixin overflow($overflow-x: hidden, $overflow-y: $overflow-x) {
+  overflow-x: $overflow-x;
+  overflow-y: $overflow-y;
+}
+
+@mixin clear() {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin transition($time, $function: 'ease-in-out') {
+  -webkit-transition: $time ;
+  -moz-transition: $time ;
+  -o-transition: $time ;
+  transition: $time ;
+}
+
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+
+@mixin backgroundImage($image) {
+  $path: '../img/#{$image}';
+  background-image: url($path);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@mixin border-radius($value1: 2px, $value2: $value1, $value3: $value1, $value4: $value1) {
+  -moz-border-top-left-radius: $value1;
+  -moz-border-top-right-radius: $value2;
+  -moz-border-bottom-right-radius: $value3;
+  -moz-border-bottom-left-radius: $value4;
+  -webkit-border-top-left-radius: $value1;
+  -webkit-border-top-right-radius: $value2;
+  -webkit-border-bottom-right-radius: $value3;
+  -webkit-border-bottom-left-radius: $value4;
+  border-top-left-radius: $value1;
+  border-top-right-radius: $value2;
+  border-bottom-right-radius: $value3;
+  border-bottom-left-radius: $value4;
+}
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin translate($x: 0, $y: 0, $z: 0) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: translate3d($x, $y, $z);
+  -o-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+@mixin linear-gradient($from, $to) {
+  background: $to;
+  background: -moz-linear-gradient(top, $from 0%, $to 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+  background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+  background: -o-linear-gradient(top, $from 0%,$to 100%);
+  background: linear-gradient(to bottom, $from 0%,$to 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+}
+
