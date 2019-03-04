@@ -25,7 +25,7 @@ $(document).ready(function(){
             }
         ]
     });
-    $('#form').submit(function (e) {
+    $('form').submit(function (e) {
         var form = $(this);
         var url = form.attr('action');
         $.ajax({
@@ -34,7 +34,8 @@ $(document).ready(function(){
             data: form.serialize(), // serializes the form's elements.
             success: function(data)
             {
-                $('.modal-body').html(data);
+                $('#modal .modal-body').html(data);
+                $('#price_request').modal('hide');
                 $('#modal').modal('toggle');
             }
         });

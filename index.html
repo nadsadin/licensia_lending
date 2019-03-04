@@ -12,6 +12,9 @@
 </head>
 <body data-spy="scroll" data-target="#menu">
 <a id="scrolltop" href="#header" class="d-none easy-scroll"></a>
+
+<form action="send.php">
+  <input type="hidden" name="price_request" value="true">
 <div class="header" id="header">
   <div class="bg-triangle"></div>
   <div class="navbar navbar-expand-sm navbar-dark">
@@ -50,7 +53,7 @@
       ЛИЦЕНЗИЯ МИН. КУЛЬТУРЫ
       <br><small>ОТ</small> 200 000 <small>РУБ.</small>
     </div>
-    <a href="#work_types" class="btn btn-primary easy-scroll">УЗНАТЬ СТОИМОСТЬ</a>
+    <a href="#work_types" class="btn btn-primary" data-toggle="modal" data-target="#price_request">УЗНАТЬ СТОИМОСТЬ</a>
   </div>
 </div>
 <div class="advantages">
@@ -80,7 +83,6 @@
     </div>
   </div>
 </div>
-<form id="form" action="send.php" method="post">
 
 <div class="bg-2" id="info">
   <div class="info">
@@ -151,11 +153,45 @@
           <div class="checkmark"></div><div for="work_type_11">Ремонт и приспособление объектов культурного наследия (памятников истории и культуры) народов российской федерации.</div></label>
       </div>
       <div class="text-center">
-        <a href="#questions" class="btn btn-primary easy-scroll">УЗНАТЬ СТОИМОСТЬ</a>
+        <a href="#questions" class="btn btn-primary"  data-toggle="modal" data-target="#price_request">УЗНАТЬ СТОИМОСТЬ</a>
       </div>
     </div>
   </div>
 </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="price_request">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Запрос цены</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-md-4">
+              <input type="text" placeholder="имя" name="name" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" placeholder="телефон" name="phone" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" placeholder="e-mail" name="email" class="form-control" required>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>
   <div class="license-order">
     <div class="container">
       <div class="h2 text-center text-secondary">ПОРЯДОК ПОЛУЧЕНИЯ ЛИЦЕНЗИИ</div>
@@ -197,6 +233,8 @@
       </div>
     </div>
   </div>
+
+<form id="form" action="send.php" method="post">
   <div id="questions" class="questions">
     <div class="container">
       <div class="module ">
@@ -223,7 +261,6 @@
       </div>
     </div>
   </div>
-
 </form>
 <div class="reviews" id="reviews">
   <div class="container">
@@ -231,19 +268,29 @@
     <div class="slider-wrap">
       <div class="slider" id="slider">
         <div class="slider-item">
-          <img src="assets/img/review.png" alt="">
+          <a href="assets/img/review1_big.jpg" data-lightbox="reviews">
+            <img src="assets/img/review.png" alt="">
+          </a>
         </div>
         <div class="slider-item">
-          <img src="assets/img/review.png" alt="">
+          <a href="assets/img/review1_big.jpg" data-lightbox="reviews">
+            <img src="assets/img/review.png" alt="">
+          </a>
         </div>
         <div class="slider-item">
-          <img src="assets/img/review.png" alt="">
+          <a href="assets/img/review1_big.jpg" data-lightbox="reviews">
+            <img src="assets/img/review.png" alt="">
+          </a>
         </div>
         <div class="slider-item">
-          <img src="assets/img/review.png" alt="">
+          <a href="assets/img/review1_big.jpg" data-lightbox="reviews">
+            <img src="assets/img/review.png" alt="">
+          </a>
         </div>
         <div class="slider-item">
-          <img src="assets/img/review.png" alt="">
+          <a href="assets/img/review1_big.jpg" data-lightbox="reviews">
+            <img src="assets/img/review.png" alt="">
+          </a>
         </div>
       </div>
     </div>
@@ -300,6 +347,7 @@
 <script src="assets/js/jquery-3.3.1.min.js" ></script>
 <script src="assets/js/bootstrap.min.js" ></script>
 <script src="assets/js/slick.min.js"></script>
+<script src="assets/js/lightbox.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

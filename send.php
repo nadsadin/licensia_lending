@@ -1,9 +1,12 @@
 <?php
-  var_dump($_POST);
   if(isset($_POST['phone'], $_POST['name'],$_POST['email'])){
     $to = 'TESTTEST@GMAIL.COM';
     $from = $_POST['email'];
-    $subject = 'Предзаказ с сайта РобоХод';
+    if(isset($_POST['price_request'])){
+      $subject = 'Запрос цены для лицензии';
+    }else{
+      $subject = 'Запрос звонка';
+    }
     $msg_body = '
             <p>Имя '.$_POST['name'].'</p>
             <p>Email '.$_POST['email'].'</p>
@@ -17,12 +20,10 @@
     $message = '
           <html>
           <head>
-            <title>Предзаказ с сайта РобоХод</title>
+            <title>'.$subject.'</title>
           </head>
           <body>
-            <p>Имя '.$_POST['name'].'</p>
-            <p>Email '.$_POST['email'].'</p>
-            <p>Телефон '.$_POST['phone'].'</p>
+            '.$msg_body.'
           </body>
           </html>
       ';

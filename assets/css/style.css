@@ -1,6 +1,7 @@
 @import url(bootstrap.min.css);
 @import url(slick.css);
 @import url(slick-theme.css);
+@import url(lightbox.css);
 body {
   font-family: 'PF Din Text Comp Pro'; }
   body #scrolltop {
