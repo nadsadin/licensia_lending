@@ -406,6 +406,21 @@ body{
     }
   }
 
+  .lb-data .lb-close{
+    position: absolute;
+    top: 0;
+    right: 10%;
+  }
+
+  .modal{
+    &-title{
+      font-size: 1.75rem;
+    }
+    input{
+      font-size: 1.55rem;
+    }
+  }
+
   a{
     color: $white;
     &:hover{

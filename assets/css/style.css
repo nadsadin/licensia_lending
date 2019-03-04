@@ -325,6 +325,14 @@ body {
           font-size: 18px;
           line-height: 18px;
           font-weight: 300; }
+  body .lb-data .lb-close {
+    position: absolute;
+    top: 0;
+    right: 10%; }
+  body .modal-title {
+    font-size: 1.75rem; }
+  body .modal input {
+    font-size: 1.55rem; }
   body a {
     color: #ffffff; }
     body a:hover {

@@ -80,5 +80,7 @@ $(document).ready(function(){
     $('.nav-close').click(function(e){
 
     });
-
+    lightbox.option({
+        'albumLabel': 'Отзыв %1 из %2'
+    })
 });
