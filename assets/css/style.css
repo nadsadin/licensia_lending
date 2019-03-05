@@ -325,6 +325,8 @@ body {
           font-size: 18px;
           line-height: 18px;
           font-weight: 300; }
+  body .lb-data .lb-close {
+    display: none; }
   body .modal-title {
     font-size: 1.75rem; }
   body .modal input {
@@ -385,6 +387,8 @@ body {
       top: 0;
       line-height: 10px; } }
 @media only screen and (max-width: 767.98px) {
+  body .lb-data .lb-close {
+    display: block; }
   body .header .navbar .gerb {
     top: 105px; }
   body .header .header-text {
