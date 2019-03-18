@@ -80,8 +80,8 @@ body{
       }
       .gerb{
         position: absolute;
-        width: 438px;
-        top: 20px;
+        max-width: 300px;
+        top: 10px;
         left: 50%;
         @include translate(-50%,0);
       }
@@ -104,7 +104,7 @@ body{
       @include font-medium;
       text-align: center;
       color: $white;
-      padding-top: 80px;
+      padding-top: 20px;
       padding-bottom: 30px;
       line-height: 66px;
       letter-spacing: 0.03em;
@@ -152,7 +152,7 @@ body{
 
 
   .module {
-      max-width: 990px;
+    max-width: 990px;
     margin: 0 auto;
     position: relative;
     box-sizing: padding-box;
@@ -479,8 +479,8 @@ body{
     .header{
       .navbar{
         .gerb{
-          width: 300px;
-          top: 80px;
+          top: 10px;
+          max-width: 200px;
         }
       }
     }
@@ -524,12 +524,14 @@ body{
       .navbar{
         .gerb{
           top: 105px;
+          max-width: 300px;
         }
       }
       .header-text{
         font-size: 50px;
         line-height: 55px;
         padding-top: 105px;
+        padding-bottom: 15px;
         small{
           font-size: 34px;
         }
@@ -571,6 +573,7 @@ body{
 
         .gerb{
           top: 105px;
+          max-width: 200px;
         }
         .navbar-collapse{
           padding: 15px 10px;
@@ -608,9 +611,9 @@ body{
         }
       }
       .header-text{
-        font-size: 40px;
-        line-height: 50px;
-        padding-top: 120px;
+        font-size: 35px;
+        line-height: 45px;
+        padding-top: 90px;
         small{
           font-size: 27px;
         }
